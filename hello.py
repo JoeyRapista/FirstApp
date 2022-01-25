@@ -11,6 +11,10 @@ def index():
 def user(name):
 	return render_template("user.html", name = name)
 
+@app.route('/about')
+def about():
+	return render_template("about.html")
+
 #error pages
 @app.errorhandler(404)
 def page_not_found(e):
