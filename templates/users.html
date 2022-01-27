@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<br/><br/>
+<h5>List of Users</h5>
+ 
+	<table class="table shadow-lg p-3 mb-5 bg-body rounded">
+	  <thead>
+	    <tr>
+	      <th scope="col">ID</th>
+	      <th scope="col">First</th> 
+	      <th scope="col">Email</th>
+	      <th scope="col">Favorite Color</th>
+	      <th scope="col">Actions</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	  	{% for user in user_list %}
+	    <tr> 
+	      <td>{{user.id}}</td>
+	      <td>{{user.name}}</td> 
+	      <td>{{user.email}}</td>
+	      <td>{{user.favorite_color}}</td>
+	      <td><a class="btn btn-secondary" href="{{ url_for('update', id=user.id)}}">Edit</a></td>
+	    </tr> 
+	    {% endfor %}
+	  </tbody>
+	</table> 
+
+
+{% endblock %}
