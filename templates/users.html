@@ -16,13 +16,13 @@
 	    </tr>
 	  </thead>
 	  <tbody>
-	  	{% for user in user_list %}
+	  	{% for user in userlist %}
 	    <tr> 
 	      <td>{{user.id}}</td>
 	      <td>{{user.name}}</td> 
 	      <td>{{user.email}}</td>
 	      <td>{{user.favorite_color}}</td>
-	      <td><a class="btn btn-secondary" href="{{ url_for('update', id=user.id)}}">Edit</a></td>
+	      <td><a class="btn btn-secondary" href="{{ url_for('update', id=user.id)}}">Edit</a> <a class="btn btn-danger" href="{{ url_for('delete', id=user.id)}}">Delete</a></td>
 	    </tr> 
 	    {% endfor %}
 	  </tbody>
