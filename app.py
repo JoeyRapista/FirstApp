@@ -13,7 +13,7 @@ from flask_login import UserMixin, login_user, LoginManager, login_required, log
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] =  'postgres://nqjexbxaealyfr:4acaf994ed492839ad40d2c4e1fc6ae55a677b3a30796bb3b8424a10e7fab3b8@ec2-35-153-35-94.compute-1.amazonaws.com:5432/d2d707k9e6uoq3'
+app.config['SQLALCHEMY_DATABASE_URI'] =  'postgresql://nqjexbxaealyfr:4acaf994ed492839ad40d2c4e1fc6ae55a677b3a30796bb3b8424a10e7fab3b8@ec2-35-153-35-94.compute-1.amazonaws.com:5432/d2d707k9e6uoq3'
 
 app.config['SECRET_KEY'] = "secretkeythatnoonewantstoknow"
 
